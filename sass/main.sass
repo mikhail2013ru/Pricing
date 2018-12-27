@@ -1,0 +1,407 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 10px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.main
+	color: $default-accent
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	min-height: 600px
+	height: 100vh
+	background: url(../img/bg-image.png) no-repeat center
+	background-size: cover
+	position: relative
+.main-overlay
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	opacity: .8
+	z-index: 0
+	background-image: linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%)
+.header
+	display: flex
+	height: 10vh
+	justify-content: space-between
+	align-items: center
+	width: 90%
+	position: relative
+	z-index: 2  
+	.logo
+		display: flex
+		align-items: center
+		img
+			height: 5vh
+		p
+			padding-left: 10px
+			font-weight: bold
+			font-size: 1.5rem
+	.menu
+		width: 70%
+		ul
+			display: flex
+			justify-content: space-around
+			list-style: none
+		a
+			color: $default-accent
+			font-size: 1.5rem
+		.menu-link
+			text-decoration: none
+		.get-started-btn
+			margin-left: 60px
+			border: 1px solid #fff
+			padding: 10px 20px
+			border-radius: 100px
+			text-transform: uppercase
+.main-text
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+	z-index: 2
+	border: 0px solid blue
+	span
+		display: inline-block
+		font-size: 1.5rem
+		&:after
+			content: ''
+			width: 20px
+			height: 1px
+			background-color: #fff
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 20px
+			height: 1px
+			background-color: #fff
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+	h1
+		font-size: 80px
+		margin: 0.5rem
+	p
+		text-align: center
+		line-height: 1.8
+		font-size: 1.5rem
+
+.main-arrow
+	z-index: 5
+	height: 15vh
+	.fa
+		font-size: 20px
+		padding: 25px
+		background-color: #fff
+		border-radius: 100%
+		color: #a0a5b0		
+		box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5)
+
+.table
+	text-align: center
+	background-color: $table-color
+	height: 1200px
+	min-height: 600px
+	.table-subtitle
+		display: inline-block
+		padding-top: 5%
+		font-size: 1.5rem
+		text-transform: uppercase
+		font-weight: bold
+		color: $table-color1
+		&:after
+			content: ''
+			width: 20px
+			height: 1px
+			background-color: $table-content-color
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 20px
+			height: 1px
+			background-color: $table-content-color
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+	h2
+		margin: 0
+		font-size: 70px
+		color: $table-color2
+	p
+		display: inline-block
+		width: 35rem
+		line-height: 1.8
+		font-size: 1.5rem
+		color: $table-color4
+
+.price-tags
+	/* height: 100vh */
+	margin-top: 5%
+	display: flex
+	justify-content: center
+	/* align-items: center */
+	.cnt
+		display: flex
+	.price-offer
+		background-color: $background-color
+		width: 450px
+		display: flex
+		align-items: center
+		flex-direction: column
+		/* border: 1px solid #d7dbe8 */
+		border-radius: 2rem 
+		padding-top: 60px
+		transition: 0.5s
+		&:hover
+			box-shadow: 0px 0px 60px 10.12px rgba(204, 204, 223, 0.71)
+			cursor: pointer
+		img
+			width: 11rem
+		span
+			margin-top: 60px
+			font-size: 1.5rem
+			text-transform: uppercase
+			font-weight: bold
+			color: $table-color1
+		h4
+			margin: 0
+			font-size: 70px
+			font-weight: 500
+			color: $table-color2
+		sup
+			padding-right: 5px
+			font-size: 30px
+			top: -0.9em
+		sub
+			font-size: 30px
+		.price-btn
+			background-color: $background-color
+			border: 1px solid #d8dce9
+			color: $price-button-color
+			text-transform: uppercase
+			font-size: 1.3rem
+			font-weight: 300
+			padding: 1rem 4rem
+			margin: 5rem auto
+			border-radius: 100px
+			box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5)
+			outline: none
+			transition: 0.2s
+			a
+				color: $price-button-color
+		.price-btn
+			&:hover
+				background-color: $table-content-color
+			a
+				&:hover
+					color: $background-color
+					text-decoration: none
+	.cnt
+		.price-offer
+			&:not(:last-child)
+				margin-right: 5rem
+
+.call-action
+	height: 400px
+	display: flex
+	justify-content: center
+	align-items: center
+	background-image: url(../img/Map.png)
+	position: relative
+.call-overlay
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	opacity: .8
+	z-index: 0
+	background-image: linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%)
+.call-content
+	z-index: 10
+	text-align: center
+	span
+		font-size: 1.2rem
+		text-transform: uppercase
+		font-weight: bold
+		color: $background-color
+	h4
+		margin: 0
+		font-size: 50px
+		font-weight: 500
+		color: $background-color
+		padding-bottom: 10px
+	.start-btn, .explore-btn
+		border: 1px solid #d8dce9
+		display: inline-flex
+		justify-content: center
+		background-color: $background-color
+		border: 1px solid #d8dce9
+		color: $price-button-color
+		text-transform: uppercase
+		font-size: 1.3rem
+		font-weight: 300
+		border-radius: 100px
+		box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5)
+		outline: none
+		transition: 0.2s
+		a
+			color: $price-button-color
+	.start-btn
+		padding: 1rem 5rem
+		margin-right: 15px
+	.explore-btn
+		padding: 1rem 3rem
+		margin-left: 15px
+	.start-btn, .explore-btn
+		&:hover
+			background-color: $table-content-color
+			a
+				&:hover
+					color: $background-color
+					text-decoration: none
+.footer
+	color: $default-accent
+	display: flex
+	flex-direction: column
+	align-items: center
+.footer-menu
+	display: flex
+	height: 10vh
+	justify-content: space-between
+	align-items: center
+	width: 90%
+	position: relative
+	z-index: 2  
+	.logo
+		display: flex
+		align-items: center
+		img
+			height: 5vh
+		p
+			padding-left: 10px
+			font-weight: bold
+			font-size: 2.5rem
+			color: $footer-color
+			font-family: $footer-font
+	.menu
+		width: 70%
+		ul
+			display: flex
+			justify-content: space-around
+			list-style: none
+		a
+			color: $footer-color-menu
+			font-size: 1.5rem
+			&:hover
+				color: $footer-color-menu1
+		.footer-menu-link
+			text-decoration: none
+		.get-started-btn
+			background-color: $table-content-color
+			margin-left: 60px
+			border: 1px solid #fff
+			padding: 10px 20px
+			border-radius: 100px
+			text-transform: uppercase
+			color: $background-color
+.line
+	display: block
+	width: 90%
+	height: 1px
+	background-color: $footer-copy-color
+	margin: 1rem auto 0 auto
+
+.footer-text
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-left: 5%
+	padding-right: 5%
+	padding-bottom: 10px
+.copyrights
+	display: flex
+	font-family: $footer-copy-font
+	p	
+		display: inline-block
+		justify-content: center
+		color: $footer-copy-color
+		font-size: 1.4rem
+		font-family: $footer-copy-font
+.social
+	display: flex
+	justify-content: space-between
+	align-items: center
+	a
+		display: inline-block
+		margin-right: 1rem
+	.fa
+		color: $footer-copy-color
+		font-size: 1.5rem
+
+
+
+
+@import "media" // Всегда в конце
